@@ -2,7 +2,7 @@ import Sound from 'react-sound';
 import React from 'react';
 import Countdown from 'react-countdown-now';
 import { Link } from 'react-router-dom';
-import Davidphoto from '../Media/Davidphoto.jpg';
+
 
 export const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -16,7 +16,7 @@ export const renderer = ({ hours, minutes, seconds, completed }) => {
 
 export default class Challenge1 extends React.Component 
 {
-state={value:''}
+state={value:'',success:false}
 
 
 changeHandler = event => {
@@ -43,6 +43,8 @@ render(){
     if (completed) {
       // Render a completed state
       return <Completionist />;
+   
+      
     } else {
       // Render a countdown
       return <span>{hours}:{minutes}:{seconds}</span>;
@@ -60,12 +62,13 @@ render(){
   backgroundColor:'yellow'
   }} 
   >
+{this.state.success!=true &&
 <Sound
       url='https://vgmdownloads.com/soundtracks/the-legend-of-zelda-ocarina-of-time/jubpsghseu/05%20Hyrule.mp3'
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />
-
+}
     <h1>Challenge 1. Just enter your name. Easy. Actually Maybe just don't</h1>
    
    
@@ -85,7 +88,11 @@ render(){
     >
      
     </Countdown>
-
+    {this.state.success===true && <Sound
+      url='https://vgmdownloads.com/soundtracks/super-mario-bros/rqpfoktl/04%20-%20Area%20Clear.mp3'
+      playStatus={Sound.status.PLAYING}
+      playFromPosition={100 /* in milliseconds */}
+    />}
 </div>
 );
 }
