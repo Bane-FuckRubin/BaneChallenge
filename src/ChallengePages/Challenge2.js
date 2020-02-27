@@ -84,6 +84,7 @@ render(){
 }
 
     <h1>Challenge 2. Find and identify the element with your name in it. </h1>
+    <h2>Hint: try look in sources (developer tools) </h2>
 
        {/* You're a shmuck.  */}
 {/* Get the hell out my code.  */}
@@ -107,7 +108,7 @@ render(){
 {/* You're a shmuck.  */}
 {/* Get the hell out my code.  */}
 <h1 className="im an invisible piece of garbage"></h1>
-        <Countdown date={Date.now() + 10000}   intervalDelay={0}
+        <Countdown date={Date.now() + 90000}   intervalDelay={0}
     precision={3}
     renderer={
      renderer

@@ -12,3 +12,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#handLayer { z-index: 2 }
+#videoLayer { z-index: 1 }
