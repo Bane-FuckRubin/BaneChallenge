@@ -2,6 +2,7 @@ import Sound from 'react-sound';
 import React from 'react';
 import Countdown from 'react-countdown-now';
 import { Link } from 'react-router-dom';
+import Zelda from '../Media/Zelda.jpeg'
 
 
 export const renderer = ({ hours, minutes, seconds, completed }) => {
@@ -62,6 +63,7 @@ render(){
   backgroundColor:'yellow'
   }} 
   >
+    <img src ={Zelda}/>
 {this.state.success!=true &&
 <Sound
       url='https://vgmdownloads.com/soundtracks/the-legend-of-zelda-ocarina-of-time/jubpsghseu/05%20Hyrule.mp3'

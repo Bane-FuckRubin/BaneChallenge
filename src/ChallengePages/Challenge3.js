@@ -85,7 +85,7 @@ render(){
     <div> {this.state.gameState===4 && <h1>David tries to use some stupid attack. Of course it doesnt work. He's a fool. But he's still in the battle.</h1>}</div>
     <div> {this.state.gameState===5 && <h1>David wins! Romy.. I mean Charizard walks away ashamed.</h1>}</div>
     
-        <Countdown date={Date.now() + 90000}   intervalDelay={0}
+        <Countdown date={Date.now() + 70000}   intervalDelay={0}
     precision={3}
     renderer={
      renderer

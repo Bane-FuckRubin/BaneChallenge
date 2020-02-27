@@ -2,6 +2,7 @@ import Sound from 'react-sound';
 import React from 'react';
 import Countdown from 'react-countdown-now';
 import { Link } from 'react-router-dom';
+import MarioKart from '../Media/MarioKart.jpg';
 
 
 export default class Challenge2 extends React.Component 
@@ -38,13 +39,14 @@ render(){
         
 <div style={{ margin: 'auto',
   width: '50%',
-  marginTop:'10rem',
+  marginTop:'4rem',
   border: '3px solid grey',
   borderRadius:'10px',
   padding: '10px',
   backgroundColor:'#90ee90'
   }} 
   >
+         <img src={MarioKart}/>
              {/* You're a shmuck.  */}
 {/* Get the hell out my code.  */}
                {/* You're a shmuck.  */}
