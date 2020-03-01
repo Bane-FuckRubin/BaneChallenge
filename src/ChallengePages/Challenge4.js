@@ -1,3 +1,9 @@
+
+// SWAP THIS WITH A GROUP ACTIVITY.
+// Plot progression...
+// Doing ok, 
+
+
 import Sound from 'react-sound';
 import React from 'react';
 import Countdown from 'react-countdown-now';
@@ -81,3 +87,5 @@ render(){
 );
 }
 }
+
+

@@ -5,15 +5,6 @@ import { Link } from 'react-router-dom';
 import Zelda from '../Media/Zelda.jpeg'
 
 
-export const renderer = ({ hours, minutes, seconds, completed }) => {
-  if (completed) {
-    // Render a completed state
-    return  <Link to='/Challenge2'>Continue you piece of garbage</Link>;
-  } else {
-    // Render a countdown
-    return props => <div style={{color:'red'}}>{props.total}</div>;
-  }
-};
 
 export default class Challenge1 extends React.Component 
 {
@@ -51,9 +42,11 @@ render(){
       return <span>{hours}:{minutes}:{seconds}</span>;
     }
   };
-  const Completionist = () => <Link to="/Challenge2" style={{fontSize:'2rem'}}>Continue you legend!</Link>;
 
+  const Completionist = () => <Link to="/Challenge2" style={{fontSize:'2rem'}}>Continue you legend!</Link>;
+  
     return(
+
 <div style={{ margin: 'auto',
   width: '50%',
   marginTop:'10rem',

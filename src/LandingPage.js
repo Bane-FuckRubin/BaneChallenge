@@ -1,8 +1,10 @@
+// Dark knight themed text
 import React from "react";
 import { Link } from 'react-router-dom';
 import Weird from './Media/Weird.gif';
 import Davidphoto from './Media/Davidphoto.jpg';
 import WeirdMario from './Media/WeirdMario.png';
+import BrawlTheme from './Media/BrawlTheme.mp3';
 
 
 class LandingPage extends React.Component {
@@ -10,7 +12,7 @@ class LandingPage extends React.Component {
 
   handlePress = (event) =>{
     this.setState({pressed:true});
-    let audio = new Audio("https://vgmdownloads.com/soundtracks/super-smash-bros.-anthology-vol.-01-super-smash-bros/hqoroisw/1.%20Main%20Theme%20%28E3%202018%20Version%29.mp3")
+    let audio = new Audio(BrawlTheme)
     audio.play();
     }
 
