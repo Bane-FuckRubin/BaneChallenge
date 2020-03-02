@@ -41,7 +41,10 @@ render(){
 }}>
     All wrong. Insert Placeholder text here.
     <br/>
+    <span style={{wordWrap:'break-word'}}>
     Go to localhost:3000/iiillliillllikhkhkkhhkhkmnmnmmmnnnmmnnnmmnnmnnaeaeaeaaeeeeaaaaeaqpqpqpqpppqppqppqpqppqppqpqpp to continue
+
+    </span>
     </h1>;
   
     return(
