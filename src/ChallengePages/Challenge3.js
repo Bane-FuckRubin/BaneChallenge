@@ -49,6 +49,7 @@ render(){
   const Fail = () => <Link to="/Challenge4" style={{fontSize:'2rem'}}>Continue. But you don't deserve to.</Link>;
   
     return(
+<div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
 <div style={{ margin: 'auto',
   width: '80%',
   marginTop:'3rem',
@@ -101,6 +102,7 @@ render(){
     />}
 
 
+</div>
 </div>
 );
 }

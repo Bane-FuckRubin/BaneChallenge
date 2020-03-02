@@ -38,7 +38,7 @@ const Fail = () => <Link to="/Challenge6" style={{fontSize:'2rem'}}>Continue. Bu
 
 
     return(
-        
+<div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
 <div style={{ margin: 'auto',
   width: '50%',
   marginTop:'4rem',
@@ -77,6 +77,7 @@ const Fail = () => <Link to="/Challenge6" style={{fontSize:'2rem'}}>Continue. Bu
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}
+</div>
 </div>
 );
 }

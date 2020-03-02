@@ -15,14 +15,14 @@ changeHandler = event => {
  
    if(
         event.target.value.toLowerCase().includes('dav')){
-            this.setState({value:this.state.value+'balls in the face'})}
+            this.setState({value:this.state.value+'Balls in the face. '})}
     else if(
         event.target.value.toLowerCase().includes('rub')){
-            this.setState({value:this.state.value+'balls everywhere'})}
+            this.setState({value:this.state.value+'Balls everywhere. '})}
 
             else if(
                 event.target.value.toLowerCase().includes('e')){
-                    this.setState({value:this.state.value+' Fart Fart'})}
+                    this.setState({value:this.state.value+' Fart Fart. '})}
     else{
     this.setState({
       value: this.state.value+event.target.value
@@ -46,7 +46,7 @@ render(){
   const Completionist = () => <Link to="/Challenge2" style={{fontSize:'2rem'}}>Continue you legend!</Link>;
   
     return(
-
+<div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
 <div style={{ margin: 'auto',
   width: '50%',
   marginTop:'10rem',
@@ -88,6 +88,7 @@ render(){
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}
+</div>
 </div>
 );
 }

@@ -45,7 +45,7 @@ render(){
     </h1>;
   
     return(
-        
+<div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
 <div style={{ margin: 'auto',
   width: '50%',
   marginTop:'4rem',
@@ -95,6 +95,7 @@ render(){
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}
+</div>
 </div>
 );
 }
