@@ -11,23 +11,38 @@ class LandingPage extends React.Component {
     super(props);
     let audio = new Audio(BaneTheme)
     audio.play();
+
+    document.addEventListener('click', function() {
+      var
+            el = document.documentElement
+          , rfs =
+                 el.requestFullScreen
+              || el.webkitRequestFullScreen
+              || el.mozRequestFullScreen
+      ;
+      rfs.call(el);
+    });
   }
 
-  state={pressed:false}
+  state={fullscreen:false, pressed:false}
   
   handlePress = (event) =>{
-    this.setState({pressed:true});
+    if (this.state.fullscreen === true) {
+      this.setState({pressed:true});
+    } else {
+      this.setState({fullscreen:true})
     }
+  }
 
 render(){
   return (
     
-    <div style={{textAlign:'center'}}>
+    <div style={{textAlign:'center', backgroundColor:'black', color:'#00FF00', position:'absolute',top:0}}>
       {this.state.pressed===false &&
         <img onClick={this.handlePress} style={{width:'100vw',height:'100vh', position:'absolute', left:0, top: 0}}src={Bane} alt="Get fucked Rubin"></img>
       }
     {this.state.pressed===true &&
-      <div>
+      <div style={{}}>
         <h3 style={{fontSize:'6rem',paddingTop:'2rem'}}>WELCOME DAVID. I AM SCARED. HELP. Scroll down to start.</h3>
         <h3 style={{fontSize:'6rem',paddingTop:'2rem',paddingBottom:'100rem'}}>↓</h3>   
         <h1>You are getting married. You need to learn how to overcome your greatest fears.</h1>
@@ -40,7 +55,8 @@ render(){
         <h3 style={{fontSize:'6rem'}}>There are a series of 10 challenges. Each has a timer. Complete the challenge in time otherwise there are consequences. </h3>
         <h3 style={{fontSize:'3rem'}}>If you are ready (which youll probably never be lol) click on the Mario player to start.</h3>
       <Link to='/Challenge1'><img onClick={<sendMessage message="this is a test"/>} src={WeirdMario} style={{maxHeight:'20rem',maxWidth:'20rem'}} alt=""/> </Link>
-      </div>}
+      </div>
+    }
     </div>
   );
 }
