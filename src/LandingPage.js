@@ -12,26 +12,28 @@ class LandingPage extends React.Component {
     let audio = new Audio(BaneTheme)
     audio.play();
 
-    document.addEventListener('click', function() {
-      var
-            el = document.documentElement
-          , rfs =
-                 el.requestFullScreen
-              || el.webkitRequestFullScreen
-              || el.mozRequestFullScreen
-      ;
-      rfs.call(el);
-    });
+
+    // Messed around with making it fullscreen
+    // document.addEventListener('click', function() {
+    //   var
+    //         el = document.documentElement
+    //       , rfs =
+    //              el.requestFullScreen
+    //           || el.webkitRequestFullScreen
+    //           || el.mozRequestFullScreen
+    //   ;
+    //   rfs.call(el);
+    // });
   }
 
   state={fullscreen:false, pressed:false}
   
   handlePress = (event) =>{
-    if (this.state.fullscreen === true) {
+    // if (this.state.fullscreen === true) {
       this.setState({pressed:true});
-    } else {
-      this.setState({fullscreen:true})
-    }
+    // } else {
+    //   this.setState({fullscreen:true})
+    // }
   }
 
 render(){
