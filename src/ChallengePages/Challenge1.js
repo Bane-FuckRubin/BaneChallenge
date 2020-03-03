@@ -6,6 +6,7 @@ import Zelda from '../Media/Zelda.jpeg'
 
 
 
+
 export default class Challenge1 extends React.Component 
 {
 state={value:'',success:false}
@@ -56,8 +57,8 @@ render(){
   backgroundColor:'yellow'
   }} 
   >
-    <img src ={Zelda}/>
-{this.state.success!=true &&
+    <img src ={Zelda} alt=""/>
+{this.state.success!==true &&
 <Sound
       url='https://vgmdownloads.com/soundtracks/the-legend-of-zelda-ocarina-of-time/jubpsghseu/05%20Hyrule.mp3'
       playStatus={Sound.status.PLAYING}

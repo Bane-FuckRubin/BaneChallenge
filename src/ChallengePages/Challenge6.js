@@ -1,8 +1,7 @@
 import Sound from 'react-sound';
 import React from 'react';
 import Countdown from 'react-countdown-now';
-import { Link } from 'react-router-dom';
-import MarioKart from '../Media/MarioKart.jpg';
+
 
 
 export default class Challenge6 extends React.Component 
@@ -84,7 +83,7 @@ render(){
 
 {/* You're a shmuck.  */}
 {/* Get the hell out my code.  */}
-<h1 className="im an invisible piece of garbage"></h1>
+<h1 className="im an invisible piece of garbage"> </h1>
         <Countdown date={Date.now() + 30000}   intervalDelay={0}
     precision={3}
     renderer={
@@ -93,7 +92,7 @@ render(){
     >
      
     </Countdown>
-    {this.state.value==true && <Sound
+    {this.state.value===true && <Sound
       url='https://vgmdownloads.com/soundtracks/super-mario-bros/rqpfoktl/04%20-%20Area%20Clear.mp3'
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}

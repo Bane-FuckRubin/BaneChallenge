@@ -7,11 +7,10 @@
 import Sound from 'react-sound';
 import React from 'react';
 import Countdown from 'react-countdown-now';
-import { Link } from 'react-router-dom';
-import MarioKart from '../Media/MarioKart.jpg';
+// import { Link } from 'react-router-dom';
 import MonstersInc from '../Media/MonstersInc.mp3';
-import MInc from '../Media/MInc.jpg';
 import Ros from '../Media/Ros.jpg';
+import ScaryChoice from './ScaryChoice';
 
 export default class Challenge4 extends React.Component 
 {
@@ -37,7 +36,7 @@ render(){
     }
   };
 
-  const Fail = () => <Link to="/Challenge5" style={{fontSize:'2rem',color:'white'}}>There is no winner. Continue</Link>;
+  const Fail = () => <ScaryChoice badImage="" goodImage="" sentence=""  destination="/Challenge5"/>;
 
   
     return(
@@ -52,7 +51,7 @@ render(){
   }} 
   >
 
-       <img src={Ros}/>
+       <img src={Ros} alt=""/>
     <h3 style={{color:'white'}}>She has the same name as Davids mum ^</h3>
 
 {this.state.value===false &&
@@ -78,7 +77,7 @@ render(){
     </Countdown>
     
 
-    {this.state.value==true && <Sound
+    {this.state.value===true && <Sound
       url='https://vgmdownloads.com/soundtracks/super-mario-bros/rqpfoktl/04%20-%20Area%20Clear.mp3'
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}

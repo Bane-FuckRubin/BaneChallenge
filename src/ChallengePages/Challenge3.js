@@ -6,6 +6,7 @@ import Pokemon1 from '../Media/Pokemon1.jpg';
 import DavidWin from '../Media/Pokemon2.jpg'
 import DavidLose from '../Media/Pokemon3.jpg';
 import Delayed from '../Delayed';
+import ScaryChoice from './ScaryChoice';
 
 
 export default class Challenge3 extends React.Component 
@@ -46,7 +47,7 @@ render(){
     }
   };
   const Completionist = () => <Link to="/Challenge4" style={{fontSize:'2rem'}}>Continue you beast.</Link>;
-  const Fail = () => <Link to="/Challenge4" style={{fontSize:'2rem'}}>Continue. But you don't deserve to.</Link>;
+  const Fail = () => <ScaryChoice badImage="" goodImage="" sentence=""  destination="/Challenge4"/>;
   
     return(
 <div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
@@ -69,9 +70,9 @@ render(){
 }
     <h1>Challenge 3. Win the pokemon battle. </h1>
     <h2>Hint: I dare you to try run or tackle. If that doesn't work, look around the room for a clue</h2>
-    {(this.state.gameState===1 || this.state.gameState===4) &&<img src={Pokemon1} />}
-    {(this.state.gameState===2 || this.state.gameState===3) &&<img src={DavidLose} />}
-    {this.state.gameState===5 &&<img src={DavidWin} />}
+    {(this.state.gameState===1 || this.state.gameState===4) &&<img src={Pokemon1} alt="" />}
+    {(this.state.gameState===2 || this.state.gameState===3) &&<img src={DavidLose} alt=""/>}
+    {this.state.gameState===5 &&<img src={DavidWin} alt=""/>}
 
     <input style={{color:'black',minWidth:'60vw',minHeight:'10vh',fontSize:'1.5rem'}}
    
@@ -94,8 +95,8 @@ render(){
     >
      
     </Countdown>
-    <h1></h1>
-    {this.state.gameState==5 && <Sound
+    <h1> </h1>
+    {this.state.gameState===5 && <Sound
       url='https://vgmdownloads.com/soundtracks/pokemon-red-green-blue-yellow/xjaxtdkb/15%20Victory%21%20%28Wild%20Poke%E2%80%99mon%29.mp3'
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}

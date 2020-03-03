@@ -17,6 +17,7 @@ import LandingPage from './LandingPage';
 
 
 const routing = (
+  <div className="body">
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={LandingPage} />
@@ -32,6 +33,7 @@ const routing = (
         <Route path='/Challenge10' component={Challenge10} />
       </Switch>
     </BrowserRouter>
+    </div>
   )
   
   ReactDOM.render(routing
