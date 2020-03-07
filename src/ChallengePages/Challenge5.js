@@ -4,6 +4,7 @@ import Countdown from 'react-countdown-now';
 import { Link } from 'react-router-dom';
 import MonstersInc from '../Media/MonstersInc.mp3';
 import ScaryChoice from './ScaryChoice';
+import AreaClear from '../Media/AreaClear.mp3';
 
 
 
@@ -31,7 +32,7 @@ render(){
             return <Fail/>;}
         else {
           // Render a countdown
-          return <span>{hours}:{minutes}:{seconds}</span>;
+          return <div style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
         }
       };
 const Completionist = () => <Link to="/Challenge6" style={{fontSize:'2rem'}}>Continue you beast.</Link>;
@@ -46,10 +47,11 @@ const Fail = () => <ScaryChoice badImage="" goodImage="" sentence="" destination
   border: '3px solid grey',
   borderRadius:'10px',
   padding: '10px',
-  backgroundColor:'blue'
+  backgroundColor:'blue',
+  
   }} 
   >
-
+ 
 {this.state.value===false &&
 <Sound
       url={MonstersInc}
@@ -59,11 +61,12 @@ const Fail = () => <ScaryChoice badImage="" goodImage="" sentence="" destination
 }
 
 
-    <h1 style={{color:'black'}}>Challenge 5. Blindfold obstacle course </h1>
-    <h2   style={{color:'black'}}>Complete all the below challenges blindfolded then click the button.</h2>
-    <button style={{backgroundColor:'red',color:'white',minWidth:'2rem',minHeight:'2rem'}}onClick={this.changeHandler}><h1>Click me when you're done.</h1></button>
+    <h1 style={{color:'black'}}>Challenge 5. Find the URL to continue </h1>
+    <h2   style={{color:'black'}}>Look this up on Stack Overflow. Something about a groom. Maybe write David.</h2>
 <h1> </h1>
-        <Countdown date={Date.now() + 10000}   intervalDelay={0}
+
+    
+<Countdown date={Date.now() + 10000}   intervalDelay={0}
     precision={3}
     renderer={
      renderer
@@ -71,10 +74,8 @@ const Fail = () => <ScaryChoice badImage="" goodImage="" sentence="" destination
     >
      
     </Countdown>
-    
-
     {this.state.value===true && <Sound
-      url='https://vgmdownloads.com/soundtracks/super-mario-bros/rqpfoktl/04%20-%20Area%20Clear.mp3'
+      url={AreaClear}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}

@@ -11,6 +11,7 @@ import Countdown from 'react-countdown-now';
 import MonstersInc from '../Media/MonstersInc.mp3';
 import Ros from '../Media/Ros.jpg';
 import ScaryChoice from './ScaryChoice';
+import AreaClear from '../Media/AreaClear.mp3';
 
 export default class Challenge4 extends React.Component 
 {
@@ -32,7 +33,7 @@ render(){
     if(completed){return <Fail/>;}
     else {
       // Render a countdown
-      return <span  style={{color:'white'}}>{hours}:{minutes}:{seconds}</span>;
+      return <div style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
     }
   };
 
@@ -78,7 +79,7 @@ render(){
     
 
     {this.state.value===true && <Sound
-      url='https://vgmdownloads.com/soundtracks/super-mario-bros/rqpfoktl/04%20-%20Area%20Clear.mp3'
+      url={AreaClear}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}

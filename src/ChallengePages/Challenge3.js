@@ -7,6 +7,8 @@ import DavidWin from '../Media/Pokemon2.jpg'
 import DavidLose from '../Media/Pokemon3.jpg';
 import Delayed from '../Delayed';
 import ScaryChoice from './ScaryChoice';
+import Battle from '../Media/Battle.mp3'
+import AreaClear from '../Media/AreaClear.mp3';
 
 
 export default class Challenge3 extends React.Component 
@@ -43,7 +45,7 @@ render(){
     else if(completed){return <Fail/>;}
     else {
       // Render a countdown
-      return <span>{hours}:{minutes}:{seconds}</span>;
+      return <div style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
     }
   };
   const Completionist = () => <Link to="/Challenge4" style={{fontSize:'2rem'}}>Continue you beast.</Link>;
@@ -63,7 +65,7 @@ render(){
   >
 {this.state.value===false &&
 <Sound
-     url='https://vgmdownloads.com/soundtracks/pokemon-red-green-blue-yellow/nbczoqlo/10%20Battle%21%20%28Trainer%20Battle%29.mp3'
+     url={Battle}
      playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />
@@ -97,7 +99,7 @@ render(){
     </Countdown>
     <h1> </h1>
     {this.state.gameState===5 && <Sound
-      url='https://vgmdownloads.com/soundtracks/pokemon-red-green-blue-yellow/xjaxtdkb/15%20Victory%21%20%28Wild%20Poke%E2%80%99mon%29.mp3'
+      url={AreaClear}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}
