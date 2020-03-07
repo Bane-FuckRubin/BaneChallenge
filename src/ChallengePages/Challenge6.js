@@ -36,12 +36,7 @@ render(){
         setTimeout(() =>{
           document.getElementById('div6').style.visibility = "visible";
           },9000); 
-        setTimeout(() =>{
-            document.getElementById('div7').style.visibility = "visible";
-            },9250);   
-            setTimeout(() =>{
-              document.getElementById('div8').style.visibility = "visible";
-              },9500); 
+       
               // setTimeout(() =>{
               //   document.getElementById('div9').style.visibility = "visible";
               //   },9750); 
@@ -96,8 +91,6 @@ render(){
             <div id="div4" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ A. 2006, the year it was released.</div>
             <div id="div5" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ B. JQuery is a modern language that will thrive in 2020</div>
             <div id="div6" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ C. After David gets fired.</div>
-            <div id="div7" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ cd Desktop\Porn\Hardcore\Japanese\Tentacle</div>
-            <div id="div8" style={{visibility:'hidden'}}>PS C:\Users\Bane\Desktop\Porn\Hardcore\Japanese\Tentacle:~
             <input style={{color:'black'}}
     
     onChange={this.changeHandler} 
@@ -124,7 +117,6 @@ render(){
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}
-</div>
 </div>
 );
 }

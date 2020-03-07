@@ -26,12 +26,6 @@ render(){
        setTimeout(() =>{
               document.getElementById('div1').style.visibility = "visible";
               },250);  
-            setTimeout(() =>{
-              document.getElementById('div2').style.visibility = "visible";
-              },500); 
-            setTimeout(() =>{
-                document.getElementById('div3').style.visibility = "visible";
-                },750);   
                 setTimeout(() =>{
                   document.getElementById('div4').style.visibility = "visible";
                   },1000); 
@@ -48,8 +42,16 @@ render(){
       return <div id="davi" style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
     }
   };
-  const Completionist = () => <Link to="/Challenge3" style={{fontSize:'2rem'}}></Link>;
-  const Fail=()=> <div style={{color:'#00FF00', fontSize:'25px'}}><img src={lose} alt="" style={{height:'400px'}}/></div>
+  const Completionist = () => 
+  <div style={{color:'#00FF00', fontSize:'25px'}}>
+<div>PS C:\Users\Bane:~ cd Desktop\Porn\Rule34</div>
+    <div>PS C:\Users\Bane\Desktop\Porn\Rule34:~ Invoke-item BowserPeach.gif</div>
+    <img src={bowser} alt=""></img>
+    <Link to="/TheGreatestGame" style={{fontSize:'2rem'}}>Continue</Link>
+
+  </div>
+
+  const Fail=()=> <div style={{color:'#00FF00', fontSize:'25px'}}><img src={lose} alt="" style={{height:'400px'}}/> <Completionist /></div>
 
   
     return(
@@ -73,8 +75,6 @@ render(){
     <div style={{color:'#00FF00', fontSize:'25px'}}>
     PS C:\Users\Bane:~ I know you enjoyed that, you sick fuck.
     <div id="div1" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ You claim to be a frontend dev, so let's see if you can find the key to continue.</div>
-    <div id="div2" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ cd Desktop\Porn\</div>
-    <div id="div3" style={{visibility:'hidden'}}>PS C:\Users\Bane\Desktop\Porn\Hardcore\Japanese\Tentacle:~</div>
     <div id="div4" style={{visibility:'hidden'}}>
        <input style={{fontSize:'25px',color:'black'}}
        

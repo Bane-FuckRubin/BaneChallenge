@@ -51,14 +51,9 @@ render(){
     document.getElementById('div1').style.visibility = "visible";
     },250);  
   setTimeout(() =>{
-    document.getElementById('div2').style.visibility = "visible";
+    document.getElementById('div4').style.visibility = "visible";
     },500); 
-  setTimeout(() =>{
-      document.getElementById('div3').style.visibility = "visible";
-      },750);   
-      setTimeout(() =>{
-        document.getElementById('div4').style.visibility = "visible";
-        },1000); 
+ 
 
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if ((completed && this.state.success!==true)||this.state.finish===true) {
@@ -118,8 +113,6 @@ render(){
     <div style={{color:'#00FF00', fontSize:'25px'}}>
       PS C:\Users\Bane:~ Fine, I'll give you an easy one.
       <div id="div1" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ Type the alphabet in order. Press clear when you stuff it up.</div>
-      <div id="div2" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ cd Desktop\Porn\Hardcore\Japanese\Tentacle</div>
-      <div id="div3" style={{visibility:'hidden'}}>PS C:\Users\Bane\Desktop\Porn\Bondage\:~</div>
       <div id="div4" style={{visibility:'hidden'}}>
         <input style={{width:'300px', color:'white'}}
           onChange={this.changeHandler} 
@@ -133,7 +126,7 @@ render(){
       
 
         <h1 style={{maxWidth:'10rem'}}>Answer: {this.state.value}</h1>
-        <Countdown date={Date.now() + 5000}   intervalDelay={0}
+        <Countdown date={Date.now() + 30000}   intervalDelay={0}
     precision={3}
     renderer={
      renderer
