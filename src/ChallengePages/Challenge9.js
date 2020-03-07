@@ -3,7 +3,6 @@ import React from 'react';
 import Countdown from 'react-countdown-now';
 import { Link } from 'react-router-dom';
 import Zelda from '../Media/Zelda.jpeg'
-import Hyrule from '../Media/Hyrule.mp3';
 import AreaClear from '../Media/AreaClear.mp3';
 import Tentacle from '../Media/Tentacle.gif';
 import Doggo from '../Media/cuteDoggo.gif';
@@ -11,7 +10,7 @@ import Hanger from '../Media/hanger.jpg';
 import Apple from '../Media/apple.gif';
 import heath from '../Media/heath.gif';
 import Reis from '../Media/cuteReis.mp4';
-// import heath from '../Media/heath.gif';
+import up from '../Media/up.gif';
 // import heath from '../Media/heath.gif';
 
 
@@ -95,7 +94,7 @@ render(){
 } */}
   <div style={{color:'#00FF00', fontSize:'25px'}}>
     PS C:\Users\Bane:~ You've made it to the final challenge. I didn't think you would.
-    <div id="div1" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ Each 50/50 will show you 1 picture and they can go either way. </div>
+    <div id="div1" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ Each 50/50 will show you 1 of the two pictures. </div>
     <div id="div2" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ Chose carefully.</div>
     <div id="div3" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ You need 3 to pass.</div>
     <br/>
@@ -105,23 +104,23 @@ render(){
       {this.state.a===true &&
             <img src={Doggo} alt=''/>
       }
-    <div>1: __ OR The death scene from Up <button onClick={() => this.choosePic(2)}>Show me!</button></div>
+    <div>2: Baby Yoda OR The death scene from Up <button onClick={() => this.choosePic(2)}>Show me!</button></div>
       {this.state.b===true &&
-            <img src={Zelda} alt=''/>
+            <img src={up} alt=''/>
       }
-    <div>1: __ OR A clothes hanger inside a penis <button onClick={() => this.choosePic(3)}>Show me!</button></div>
+    <div>3: Tom Cruise being awesome OR A clothes hanger inside a penis <button onClick={() => this.choosePic(3)}>Show me!</button></div>
       {this.state.c===true &&
             <img src={Hanger} alt=''/>
       }
-    <div>1: Adorable Adam Reisner OR The most disgusting thing you could imagine <button onClick={() => this.choosePic(4)}>Show me!</button></div>
+    <div>4: Adorable little Adam Reisner OR Man gets fucked by horse <button onClick={() => this.choosePic(4)}>Show me!</button></div>
       {this.state.d===true &&
             <Video src={Reis} alt=''/>
       }
-    <div>1:  OR Woman shitting out an apple <button onClick={() => this.choosePic(5)}>Show me!</button></div>
+    <div>5: Man Getting Hit By Football OR Woman shitting out an apple <button onClick={() => this.choosePic(5)}>Show me!</button></div>
       {this.state.e===true &&
             <img src={Apple} alt=''/>
       }
-    <div>1: Heath Ledger's Joker OR Jared Leto's Joker <button onClick={() => this.choosePic(6)}>Show me!</button></div>
+    <div>6: Heath Ledger's Joker OR Jared Leto's Joker <button onClick={() => this.choosePic(6)}>Show me!</button></div>
       {this.state.f===true &&
             <img src={heath} alt=''/>
       }
