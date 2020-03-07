@@ -6,6 +6,8 @@ import MarioKart from '../Media/MarioKart.jpg';
 import ScaryChoice from './ScaryChoice';
 import RainbowRoad from '../Media/RainbowRoad.mp3';
 import AreaClear from '../Media/AreaClear.mp3';
+import lose from '../Media/lose.gif';
+import bowser from '../Media/bowser.gif';
 
 export default class Challenge2 extends React.Component 
 {
@@ -47,7 +49,7 @@ render(){
     }
   };
   const Completionist = () => <Link to="/Challenge3" style={{fontSize:'2rem'}}></Link>;
-  const Fail=()=> <div>You lose! Good day Sir!</div>
+  const Fail=()=> <div style={{color:'#00FF00', fontSize:'25px'}}><img src={lose} alt="" style={{height:'400px'}}/></div>
 
   
     return(

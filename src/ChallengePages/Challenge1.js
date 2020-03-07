@@ -75,7 +75,7 @@ render(){
   
   
     return(
-<div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
+<div style={{backgroundColor:'black', height:'200vh', width:'100vw', position:'absolute',top:0}}>
 <div style={{ margin: 'auto',
   width: '65%',
   marginTop:'2rem',
@@ -99,7 +99,7 @@ render(){
     <div id="div3" style={{visibility:'hidden'}}>PS C:\Users\Bane\Desktop\Porn\Hardcore\Japanese\Tentacle:~</div>
     <div>{this.state.value}</div>
     <div id="div4" style={{visibility:'hidden'}}>
-      <input style={{width:'10px', color:'white'}}
+      <input style={{width:'100px', color:'white'}}
         onChange={this.changeHandler} 
           type="text"
         />
