@@ -55,7 +55,7 @@ render(){
 <div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
 <div style={{ margin: 'auto',
   width: '80%',
-  marginTop:'3rem',
+  marginTop:'2rem',
   border: '3px solid grey',
   borderRadius:'10px',
   padding: '10px',

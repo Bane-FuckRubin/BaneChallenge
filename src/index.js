@@ -22,15 +22,15 @@ const routing = (
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route path='/Challenge1' component={Challenge1} />
-        <Route path='/Challenge2' component={Challenge2} />
+        <Route path='/BaneLovesDemMidgets' component={Challenge2} />
         <Route path='/Challenge3' component={Challenge3} />
         <Route path='/Challenge4' component={Challenge4} />
         <Route path='/Challenge5' component={Challenge5} />
-        <Route path='/Challenge6' component={Challenge6} />
-        <Route path='/iiillliillllikhkhkkhhkhkmnmnmmmnnnmmnnnmmnnmnnaeaeaeaaeeeeaaaaeaqpqpqpqpppqppqppqpqppqppqpqpp' component={Challenge7} />
-        <Route path='/Challenge8' component={Challenge8} />
-        <Route path='/Challenge9' component={Challenge9} />
-        <Route path='/Challenge10' component={Challenge10} />
+        <Route path='/iiilllillllikhkhkkhkhhkhkhkmnmmnnnmnnmnnaeaeaeaaeeaaaaeaqpqpqqpqppqppqppqpqpp' component={Challenge6} />
+        <Route path='/Challenge7' component={Challenge7} />
+        <Route path='/TitsAreTheGreatest' component={Challenge8} />
+        <Route path='/8======D' component={Challenge9} />
+        <Route path='/TheGreatestGame' component={Challenge10} />
       </Switch>
     </BrowserRouter>
     </div>

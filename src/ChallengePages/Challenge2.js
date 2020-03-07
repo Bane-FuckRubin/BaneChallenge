@@ -21,6 +21,19 @@ if (event.target.value.length>=5 && event.target.value.toLowerCase()==="input"){
   
 
 render(){
+       setTimeout(() =>{
+              document.getElementById('div1').style.visibility = "visible";
+              },250);  
+            setTimeout(() =>{
+              document.getElementById('div2').style.visibility = "visible";
+              },500); 
+            setTimeout(() =>{
+                document.getElementById('div3').style.visibility = "visible";
+                },750);   
+                setTimeout(() =>{
+                  document.getElementById('div4').style.visibility = "visible";
+                  },1000); 
+              
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (this.state.value===true) {
       // Render a completed state
@@ -30,56 +43,24 @@ render(){
     else if(completed){return <Fail/>;}
     else {
       // Render a countdown
-      return <div style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
+      return <div id="davi" style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
     }
   };
-  const Completionist = () => <Link to="/Challenge3" style={{fontSize:'2rem'}}>You win you legend.</Link>;
-//   const Fail = () => <Link to="/Challenge3" style={{fontSize:'2rem'}}>You suck sweaty ones.</Link>;
-  const Fail=()=><ScaryChoice img={MarioKart} sentence="MarioKart or David" destination="/Challenge3"/>
+  const Completionist = () => <Link to="/Challenge3" style={{fontSize:'2rem'}}></Link>;
+  const Fail=()=> <div>You lose! Good day Sir!</div>
 
   
     return(
-<div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
+<div id="dav" style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
 <div style={{ margin: 'auto',
-  width: '50%',
+  width: '60%',
   marginTop:'4rem',
-  border: '3px solid grey',
+  border: '1px solid grey',
   borderRadius:'10px',
   padding: '10px',
-  backgroundColor:'#90ee90'
   }} 
   >
-         <img src={MarioKart} alt=""/>
-             {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-               {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-               {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-               {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
+           
 {this.state.value===false &&
 <Sound
       url={RainbowRoad}
@@ -87,33 +68,24 @@ render(){
       playFromPosition={100 /* in milliseconds */}
     />
 }
+    <div style={{color:'#00FF00', fontSize:'25px'}}>
+    PS C:\Users\Bane:~ I know you enjoyed that, you sick fuck.
+    <div id="div1" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ You claim to be a frontend dev, so let's see if you can find the key to continue.</div>
+    <div id="div2" style={{visibility:'hidden'}}>PS C:\Users\Bane:~ cd Desktop\Porn\</div>
+    <div id="div3" style={{visibility:'hidden'}}>PS C:\Users\Bane\Desktop\Porn\Hardcore\Japanese\Tentacle:~</div>
+    <div id="div4" style={{visibility:'hidden'}}>
+       <input style={{fontSize:'25px',color:'black'}}
+       
+       onChange={this.changeHandler} 
+       type="text"
+       className="david"
+       //   The code is 'input'
+       />
+    </div>
+  </div>
 
-    <h1>Challenge 2. Find and identify the element with your name in it. </h1>
-    <h2>Hint: try look in sources (developer tools) </h2>
-
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-               {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-       {/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
-
-        <input style={{fontSize:'3rem',color:'black'}}
-    
-        onChange={this.changeHandler} 
-          type="text"
-          className="david"
-        //   You found me. just write 'input'
-        />
-
-{/* You're a shmuck.  */}
-{/* Get the hell out my code.  */}
 <h1 className="im an invisible piece of garbage"> </h1>
-        <Countdown date={Date.now() + 6000}   intervalDelay={0}
+        <Countdown date={Date.now() + 30000}   intervalDelay={0}
     precision={3}
     renderer={
      renderer
