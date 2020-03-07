@@ -1,6 +1,7 @@
 import Sound from 'react-sound';
 import React from 'react';
 import Countdown from 'react-countdown-now';
+import AreaClear from '../Media/AreaClear.mp3';
 
 
 
@@ -26,7 +27,7 @@ render(){
     else if(completed){return <Fail/>;}
     else {
       // Render a countdown
-      return <span>{hours}:{minutes}:{seconds}</span>;
+      return <div style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
     }
   };
 //   const Completionist = () => <Link to="/Challenge7" style={{fontSize:'2rem'}}>You win you legend.</Link>;
@@ -59,7 +60,7 @@ render(){
   >
         {this.state.value===false &&
 <Sound
-      url='https://vgmdownloads.com/soundtracks/mario-kart-double-dash/cirexgjn/054%20-%20Rainbow%20Road%20%28Final%20Lap%29.mp3'
+      url={AreaClear}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />

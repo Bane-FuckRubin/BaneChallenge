@@ -3,6 +3,8 @@ import React from 'react';
 import Countdown from 'react-countdown-now';
 import { Link } from 'react-router-dom';
 import Zelda from '../Media/Zelda.jpeg'
+import Hyrule from '../Media/Hyrule.mp3';
+import AreaClear from '../Media/AreaClear.mp3';
 
 
 
@@ -40,7 +42,7 @@ render(){
       
     } else {
       // Render a countdown
-      return <span>{hours}:{minutes}:{seconds}</span>;
+      return <div style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
     }
   };
 
@@ -50,7 +52,7 @@ render(){
 <div style={{backgroundColor:'black', height:'100vh', width:'100vw', position:'absolute',top:0}}>
 <div style={{ margin: 'auto',
   width: '50%',
-  marginTop:'10rem',
+  marginTop:'5rem',
   border: '3px solid grey',
   borderRadius:'10px',
   padding: '10px',
@@ -60,7 +62,7 @@ render(){
     <img src ={Zelda} alt=""/>
 {this.state.success!==true &&
 <Sound
-      url='https://vgmdownloads.com/soundtracks/the-legend-of-zelda-ocarina-of-time/jubpsghseu/05%20Hyrule.mp3'
+      url={Hyrule}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />
@@ -85,7 +87,7 @@ render(){
      
     </Countdown>
     {this.state.success===true && <Sound
-      url='https://vgmdownloads.com/soundtracks/super-mario-bros/rqpfoktl/04%20-%20Area%20Clear.mp3'
+      url={AreaClear}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}

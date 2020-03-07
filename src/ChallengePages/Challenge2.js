@@ -3,8 +3,9 @@ import React from 'react';
 import Countdown from 'react-countdown-now';
 import { Link } from 'react-router-dom';
 import MarioKart from '../Media/MarioKart.jpg';
-import Davidphoto from '../Media/Davidphoto.jpg'
 import ScaryChoice from './ScaryChoice';
+import RainbowRoad from '../Media/RainbowRoad.mp3';
+import AreaClear from '../Media/AreaClear.mp3';
 
 export default class Challenge2 extends React.Component 
 {
@@ -29,12 +30,12 @@ render(){
     else if(completed){return <Fail/>;}
     else {
       // Render a countdown
-      return <span>{hours}:{minutes}:{seconds}</span>;
+      return <div style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
     }
   };
   const Completionist = () => <Link to="/Challenge3" style={{fontSize:'2rem'}}>You win you legend.</Link>;
 //   const Fail = () => <Link to="/Challenge3" style={{fontSize:'2rem'}}>You suck sweaty ones.</Link>;
-  const Fail=()=><ScaryChoice badImage={MarioKart} goodImage={Davidphoto} sentence="MarioKart or David" destination="/Challenge3"/>
+  const Fail=()=><ScaryChoice img={MarioKart} sentence="MarioKart or David" destination="/Challenge3"/>
 
   
     return(
@@ -81,7 +82,7 @@ render(){
 {/* Get the hell out my code.  */}
 {this.state.value===false &&
 <Sound
-      url='https://vgmdownloads.com/soundtracks/mario-kart-double-dash/cirexgjn/054%20-%20Rainbow%20Road%20%28Final%20Lap%29.mp3'
+      url={RainbowRoad}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />
@@ -112,7 +113,7 @@ render(){
 {/* You're a shmuck.  */}
 {/* Get the hell out my code.  */}
 <h1 className="im an invisible piece of garbage"> </h1>
-        <Countdown date={Date.now() + 90000}   intervalDelay={0}
+        <Countdown date={Date.now() + 6000}   intervalDelay={0}
     precision={3}
     renderer={
      renderer
@@ -121,7 +122,7 @@ render(){
      
     </Countdown>
     {this.state.value===true && <Sound
-      url='https://vgmdownloads.com/soundtracks/super-mario-bros/rqpfoktl/04%20-%20Area%20Clear.mp3'
+      url={AreaClear}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}

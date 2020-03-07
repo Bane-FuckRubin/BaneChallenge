@@ -4,6 +4,7 @@ import Countdown from 'react-countdown-now';
 import { Link } from 'react-router-dom';
 import Zelda from '../Media/Zelda.jpeg'
 import ScaryChoice from './ScaryChoice';
+import AreaClear from '../Media/AreaClear.mp3';
 
 
 const jumble=(letter)=>{
@@ -57,7 +58,7 @@ render(){
       }
       else {
       // Render a countdown
-      return <span>{hours}:{minutes}:{seconds}</span>;
+      return <div style={{textAlign:'center'}}><span style={{fontSize:'7rem',color:'red',}}>{minutes}:{seconds}</span></div>;
     }
   };
 
@@ -73,13 +74,13 @@ render(){
   border: '3px solid grey',
   borderRadius:'10px',
   padding: '10px',
-  backgroundColor:'white'
+  backgroundColor:'grey'
   }} 
   >
     <img src ={Zelda} alt=""/>
 {/* {this.state.success!=true && */}
 <Sound
-      url='https://vgmdownloads.com/soundtracks/the-legend-of-zelda-ocarina-of-time/jubpsghseu/05%20Hyrule.mp3'
+      url={AreaClear}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />
@@ -105,7 +106,7 @@ render(){
      
     </Countdown>
     {this.state.success===true && <Sound
-      url='https://vgmdownloads.com/soundtracks/super-mario-bros/rqpfoktl/04%20-%20Area%20Clear.mp3'
+      url={AreaClear}
       playStatus={Sound.status.PLAYING}
       playFromPosition={100 /* in milliseconds */}
     />}
