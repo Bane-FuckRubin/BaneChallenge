@@ -15,8 +15,12 @@
     "react-scripts": "3.4.0",
     "react-sound": "^1.2.0"
   },
-  "scripts": {
+  
+  "homepage": "http://bane-fuckrubin.github.io/BaneChallenge",
+  "scripts": {    
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
